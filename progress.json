@@ -1,17 +1,18 @@
 {
-  "lastUpdated": "2026-02-21T14:34:00+09:00",
+  "lastUpdated": "2026-02-21T15:26:00+09:00",
   "projects": [
     {
       "id": "api-specs",
       "name": "API req/res 스펙 수집",
-      "status": "wip",
+      "status": "done",
       "description": "쿠팡 · 스마트스토어 · 카페24 — 문의/주문/상품 API 전체",
+      "completedAt": "2026-02-21",
       "categories": [
-        { "name": "카페24", "done": 4, "total": 4, "status": "done", "note": "회원/주문/상품/게시판 (70KB)" },
-        { "name": "쿠팡 CS", "done": 6, "total": 6, "status": "done", "note": "6건 완료 (13KB)" },
-        { "name": "쿠팡 상품", "done": 1, "total": 18, "status": "wip", "note": "브라우저 릴레이 필요" },
-        { "name": "쿠팡 배송/환불", "done": 0, "total": 12, "status": "todo", "note": "브라우저 릴레이 필요" },
-        { "name": "스마트스토어", "done": 0, "total": 29, "status": "todo", "note": "브라우저 필요" }
+        { "name": "카페24", "done": 4, "total": 4, "status": "done", "note": "회원/주문/상품/게시판" },
+        { "name": "쿠팡 CS", "done": 6, "total": 6, "status": "done", "note": "완료" },
+        { "name": "쿠팡 상품", "done": 18, "total": 18, "status": "done", "note": "완료" },
+        { "name": "쿠팡 배송/환불", "done": 12, "total": 12, "status": "done", "note": "완료" },
+        { "name": "스마트스토어", "done": 29, "total": 29, "status": "done", "note": "완료" }
       ]
     },
     {
