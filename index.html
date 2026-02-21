@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="10">
+<title>🌊 용남 대시보드 — Softly Company</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; padding: 24px; }
+  .header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+  .header h1 { font-size: 28px; font-weight: 700; }
+  .header .badge { background: #1e40af; padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  .updated { color: #64748b; font-size: 13px; margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+  .card { background: #1e293b; border-radius: 16px; padding: 24px; border: 1px solid #334155; }
+  .card h2 { font-size: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .task { padding: 12px 0; border-bottom: 1px solid #334155; }
+  .task:last-child { border-bottom: none; }
+  .task-title { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+  .task-meta { font-size: 13px; color: #94a3b8; }
+  .progress-bar { background: #334155; border-radius: 8px; height: 8px; margin-top: 8px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 8px; transition: width 0.3s; }
+  .fill-done { background: #22c55e; }
+  .fill-wip { background: #3b82f6; }
+  .fill-todo { background: #f59e0b; }
+  .status { display: inline-block; padding: 2px 10px; border-radius: 8px; font-size: 12px; font-weight: 600; }
+  .s-done { background: #166534; color: #86efac; }
+  .s-wip { background: #1e3a5f; color: #93c5fd; }
+  .s-todo { background: #713f12; color: #fde68a; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat { text-align: center; padding: 16px; background: #1e293b; border-radius: 12px; border: 1px solid #334155; }
+  .stat-num { font-size: 32px; font-weight: 800; }
+  .stat-label { font-size: 13px; color: #94a3b8; margin-top: 4px; }
+  .stat-green .stat-num { color: #22c55e; }
+  .stat-blue .stat-num { color: #3b82f6; }
+  .stat-amber .stat-num { color: #f59e0b; }
+  .file-list { font-size: 13px; color: #94a3b8; }
+  .file-list code { background: #334155; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: #e2e8f0; }
+  .section-label { font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>🌊 작업 대시보드</h1>
+    <div class="updated">마지막 업데이트: 2026-02-21 14:22 KST</div>
+  </div>
+  <div class="badge">Softly Company</div>
+</div>
+
+<div class="stats">
+  <div class="stat stat-green">
+    <div class="stat-num">2</div>
+    <div class="stat-label">완료 프로젝트</div>
+  </div>
+  <div class="stat stat-blue">
+    <div class="stat-num">1</div>
+    <div class="stat-label">진행 중</div>
+  </div>
+  <div class="stat stat-amber">
+    <div class="stat-num">3</div>
+    <div class="stat-label">남은 작업</div>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- 현재 진행 중 -->
+  <div class="card">
+    <h2>🔵 진행 중</h2>
+
+    <div class="task">
+      <div class="task-title">API req/res 스펙 수집 <span class="status s-wip">진행 중</span></div>
+      <div class="task-meta">쿠팡 · 스마트스토어 · 카페24 — 문의/주문/상품 API 전체</div>
+      <div class="progress-bar"><div class="progress-fill fill-wip" style="width: 45%"></div></div>
+      <div class="task-meta" style="margin-top: 6px;">
+
+        <strong>✅ 카페24</strong> — 회원/주문/상품/게시판 완료 (70KB)<br>
+        <strong>✅ 쿠팡 CS</strong> — 6/6건 완료 (13KB)<br>
+        <strong>🔧 쿠팡 상품</strong> — 1/18건 (브라우저 릴레이 필요)<br>
+        <strong>⏳ 쿠팡 배송/환불</strong> — 0/12건<br>
+        <strong>⏳ 스마트스토어</strong> — 0/~29건 (브라우저 필요)
+      </div>
+    </div>
+  </div>
+
+  <!-- 완료 프로젝트 -->
+  <div class="card">
+    <h2>✅ 완료</h2>
+
+    <div class="task">
+      <div class="task-title">cafe24 알파리뷰 연동 <span class="status s-done">완료</span></div>
+      <div class="task-meta">2026-02-19 · 보풀제거기 514건 + 에어스타일러 335건</div>
+      <div class="task-meta">Excel 10개 출력 · Gemini API 사용</div>
+      <div class="progress-bar"><div class="progress-fill fill-done" style="width: 100%"></div></div>
+    </div>
+
+    <div class="task">
+      <div class="task-title">쿠팡 스크래퍼 API 전환 <span class="status s-done">완료</span></div>
+      <div class="task-meta">2026-02-20 · DOM → API 기반 전면 개편, 수집 ~30초</div>
+      <div class="progress-bar"><div class="progress-fill fill-done" style="width: 100%"></div></div>
+    </div>
+  </div>
+
+  <!-- 파일 현황 -->
+  <div class="card">
+    <h2>📁 파일 현황</h2>
+    <div class="section-label">API 스펙 (D:\cx-agent\practice\api_specs\)</div>
+    <div class="file-list">
+      <div class="task">
+        <code>api-reference.md</code> 47KB — 3개 플랫폼 목록<br>
+        <code>cafe24-api-specs.md</code> 70KB — 카페24 상세 ✅<br>
+        <code>coupang-cs-api-specs.md</code> 13KB — 쿠팡 CS ✅<br>
+        <code>coupang-product-api-specs.md</code> 5KB — 쿠팡 상품 (1/18)
+      </div>
+    </div>
+    <div class="section-label" style="margin-top: 12px;">리뷰 스크래퍼 (D:\review-scrapper\)</div>
+    <div class="file-list">
+      <div class="task">
+        <code>output/</code> Excel 10개 — 알파리뷰 완료분
+      </div>
+    </div>
+  </div>
+
+  <!-- 환경/도구 -->
+  <div class="card">
+    <h2>🛠️ 환경</h2>
+    <div class="task">
+      <div class="task-meta">
+        <strong>IDE:</strong> Antigravity<br>
+        <strong>GitHub:</strong> chaning49 @ softly-company<br>
+        <strong>AI:</strong> Claude Opus 4 (Anthropic) + Gemini Flash<br>
+        <strong>어시스턴트:</strong> 🌊 용남 (OpenClaw)<br>
+        <strong>채널:</strong> Slack DM 연결
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
