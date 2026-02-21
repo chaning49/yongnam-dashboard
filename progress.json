@@ -1,0 +1,37 @@
+{
+  "lastUpdated": "2026-02-21T14:34:00+09:00",
+  "projects": [
+    {
+      "id": "api-specs",
+      "name": "API req/res 스펙 수집",
+      "status": "wip",
+      "description": "쿠팡 · 스마트스토어 · 카페24 — 문의/주문/상품 API 전체",
+      "categories": [
+        { "name": "카페24", "done": 4, "total": 4, "status": "done", "note": "회원/주문/상품/게시판 (70KB)" },
+        { "name": "쿠팡 CS", "done": 6, "total": 6, "status": "done", "note": "6건 완료 (13KB)" },
+        { "name": "쿠팡 상품", "done": 1, "total": 18, "status": "wip", "note": "브라우저 릴레이 필요" },
+        { "name": "쿠팡 배송/환불", "done": 0, "total": 12, "status": "todo", "note": "브라우저 릴레이 필요" },
+        { "name": "스마트스토어", "done": 0, "total": 29, "status": "todo", "note": "브라우저 필요" }
+      ]
+    },
+    {
+      "id": "alphareview",
+      "name": "cafe24 알파리뷰 연동",
+      "status": "done",
+      "description": "보풀제거기 514건 + 에어스타일러 335건",
+      "completedAt": "2026-02-19",
+      "categories": [
+        { "name": "보풀제거기", "done": 514, "total": 514, "status": "done" },
+        { "name": "에어스타일러", "done": 335, "total": 335, "status": "done" }
+      ]
+    },
+    {
+      "id": "coupang-scraper",
+      "name": "쿠팡 스크래퍼 API 전환",
+      "status": "done",
+      "description": "DOM → API 기반 전면 개편, 수집 ~30초",
+      "completedAt": "2026-02-20",
+      "categories": []
+    }
+  ]
+}
