@@ -1,25 +1,25 @@
 {
-  "lastUpdated": "2026-02-21T15:26:00+09:00",
+  "lastUpdated": "2026-02-21T15:27:00+09:00",
   "projects": [
     {
       "id": "api-specs",
       "name": "API req/res 스펙 수집",
       "status": "done",
-      "description": "쿠팡 · 스마트스토어 · 카페24 — 문의/주문/상품 API 전체",
+      "description": "쿠팡 · 스마트스토어 · 카페24 — 문의/주문/상품 API 전체 수집 완료",
       "completedAt": "2026-02-21",
       "categories": [
-        { "name": "카페24", "done": 4, "total": 4, "status": "done", "note": "회원/주문/상품/게시판" },
-        { "name": "쿠팡 CS", "done": 6, "total": 6, "status": "done", "note": "완료" },
-        { "name": "쿠팡 상품", "done": 18, "total": 18, "status": "done", "note": "완료" },
-        { "name": "쿠팡 배송/환불", "done": 12, "total": 12, "status": "done", "note": "완료" },
-        { "name": "스마트스토어", "done": 29, "total": 29, "status": "done", "note": "완료" }
+        { "name": "카페24", "done": 4, "total": 4, "status": "done", "note": "cafe24-api.md (90KB)" },
+        { "name": "쿠팡 CS", "done": 6, "total": 6, "status": "done", "note": "coupang-api.md 통합" },
+        { "name": "쿠팡 상품", "done": 22, "total": 22, "status": "done", "note": "coupang-api.md 통합" },
+        { "name": "쿠팡 주문", "done": 12, "total": 12, "status": "done", "note": "coupang-api.md (82KB)" },
+        { "name": "스마트스토어", "done": 29, "total": 29, "status": "done", "note": "smartstore-api.md (70KB)" }
       ]
     },
     {
       "id": "alphareview",
       "name": "cafe24 알파리뷰 연동",
       "status": "done",
-      "description": "보풀제거기 514건 + 에어스타일러 335건",
+      "description": "보풀제거기 514건 + 에어스타일러 335건 · Excel 10개",
       "completedAt": "2026-02-19",
       "categories": [
         { "name": "보풀제거기", "done": 514, "total": 514, "status": "done" },
