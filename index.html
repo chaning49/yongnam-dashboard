@@ -170,13 +170,12 @@
 </div>
 
 <script>
-const H='a3f2b1c9';
-function hash(s){let h=0;for(let i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0;}return(h>>>0).toString(16);}
+const PW='1415';
 const KEY='yongnam_dash_auth';
 
 function tryLogin(){
   const pw=document.getElementById('pwInput').value;
-  if(hash(pw)===H){
+  if(pw===PW){
     sessionStorage.setItem(KEY,'1');
     showDashboard();
   } else {
